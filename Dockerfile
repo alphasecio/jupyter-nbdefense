@@ -7,6 +7,9 @@ USER root
 # Install curl
 RUN apt-get update && apt-get install -y curl
 
+# Ensure curl is in the PATH for all users
+ENV PATH="/usr/bin/curl:$PATH"
+
 # Install JupyterLab 3.x and the nbdefense_jupyter extension
 RUN pip install jupyterlab==3.* nbdefense_jupyter
 
