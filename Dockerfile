@@ -4,8 +4,8 @@ FROM jupyter/base-notebook:python-3.10
 # Switch to root to install system packages
 USER root
 
-# Install the nbdefense_jupyter extension
-RUN pip install nbdefense_jupyter
+# Install JupyterLab 3.x and the nbdefense_jupyter extension
+RUN pip install jupyterlab==3.* nbdefense_jupyter
 
 # Install the en_core_web_trf model for spaCy if the PII module is needed
 RUN pip install spacy && python -m spacy download en_core_web_trf
