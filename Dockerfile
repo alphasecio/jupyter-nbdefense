@@ -1,5 +1,5 @@
 # Use the official JupyterLab base-notebook image as the base image
-FROM jupyter/base-notebook:python-3.11
+FROM jupyter/base-notebook:python-3.10
 
 # Switch to root to install system packages
 USER root
