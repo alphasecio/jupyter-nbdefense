@@ -4,6 +4,9 @@ FROM jupyter/base-notebook:python-3.10
 # Switch to root to install system packages
 USER root
 
+# Install curl
+RUN apt-get update && apt-get install -y curl
+
 # Install JupyterLab 3.x and the nbdefense_jupyter extension
 RUN pip install jupyterlab==3.* nbdefense_jupyter
 
