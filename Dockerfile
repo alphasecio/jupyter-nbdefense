@@ -7,8 +7,8 @@ USER root
 # Install the nbdefense_jupyter extension
 RUN pip install nbdefense_jupyter
 
-# Optionally, install the en_core_web_trf model for spaCy if the PII module is needed
-# RUN pip install spacy && python -m spacy download en_core_web_trf
+# Install the en_core_web_trf model for spaCy if the PII module is needed
+RUN pip install spacy && python -m spacy download en_core_web_trf
 
 # Switch back to the jovyan user
 USER $NB_UID
